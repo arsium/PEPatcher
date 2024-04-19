@@ -4,13 +4,25 @@ The code source is not public. However, the release is not obfuscated. Feel free
 
 This program is reserved to x64 PE binaries. It is currently able to :
 
-* erase file timestamp
+* erase file timestamp          
 * erase debug information
 * erase exception information
 * erase rich header
 * set the PE checksum correct value
 
 The idea to create this program comes from studying PE format and modifying the binaries while keeping them still working. More features will be added.
+The program works as follows : 
+
+```
+"PEPatcher.exe value_choosen "\??\C:\your_path""
+```
+
+Possible values are : ```ERASE_FILE_TIME_STAMP (1), ERASE_DEBUG_INFORMATION (2), ERASE_EXCEPTION_INFORMATION (4), ERASE_RICH_HEADER (8), SET_CHECKSUM_VALUE (16)```.<br>
+Example with  ```ERASE_DEBUG_INFORMATION + ERASE_EXCEPTION_INFORMATION + ERASE_RICH_HEADER``` : 
+
+```
+"PEPatcher.exe 14 "\??\C:\your_path""
+```
 
 <h2>Debug information </h2>
 <p>After being compiled, executable always contains debug information. This is not possible to remove them without manipulating the binaries after being built.</p>
