@@ -1,5 +1,5 @@
 # PEPatcher
-A PE information patcher.
+A PE patcher.
 The code source is not public. However, the release is not obfuscated. Feel free to reverse it.
 
 This program is reserved to x64 PE binaries. It is currently able to :
